@@ -42,7 +42,7 @@ public class Tests
         };
         
         var world = new World(sample, new Draw("12 red, 13 green, 14 blue"));
-        world.Power().ShouldBe(70265);
+        world.Power().ShouldBe(2286);
     }
     
     [Test]
@@ -50,7 +50,7 @@ public class Tests
     {
         var list = await Utilities.ReadInputByDay("Day02");
         var world = new World(list, new Draw("12 red, 13 green, 14 blue"));
-        world.Power().ShouldBe(2286);
+        world.Power().ShouldBe(70265);
     }
     
     private class World
