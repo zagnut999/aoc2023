@@ -40,3 +40,30 @@ internal static class Utilities
         return newList.AsReadOnly();
     }
 }
+
+public class Point(int x, int y)
+{
+    public static Point New(int x, int y) => new(x, y);
+            
+    public int X { get; } = x;
+    public int Y { get; } = y;
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is Point vector)
+        {
+            return vector.X == X && vector.Y == Y;
+        }
+        return false;
+    }
+            
+    public override int GetHashCode()
+    {
+        return X.GetHashCode() ^ Y.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        return $"({X},{Y})";
+    }
+}
