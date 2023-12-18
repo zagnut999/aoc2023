@@ -44,6 +44,7 @@ internal static class Utilities
 public class Point(int x, int y)
 {
     public static Point New(int x, int y) => new(x, y);
+    public static Point New(Point point) => new(point.X, point.Y);
             
     public int X { get; } = x;
     public int Y { get; } = y;
